@@ -1,0 +1,10 @@
+Learning Sencha EXTJS 4
+
+Learning Outcome: 
+1. Hooking it up to the RAILS 3 CRUD operation
+2. extending Controller. 
+	=> The key is in the constructor() and init()
+	
+3. extending View
+	=> THe key action in on the initComponent() << setup the config programmatically
+	
