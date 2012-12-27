@@ -40,6 +40,7 @@ Ext.define('AM.store.SalesOrders', {
 	} ,
 	onCreateRecords:function (records, operation, success) {
 		console.log("onCreateRecords");
+		// Ext.widget("salesorderlist").getView().select(records[0], true, true);
 	},
 
 	onUpdateRecords:function (records, operation, success) {

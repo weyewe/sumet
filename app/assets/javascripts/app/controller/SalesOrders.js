@@ -172,7 +172,14 @@ Ext.define('AM.controller.SalesOrders', {
 			
 		}
 		
-	}
+	},
+	
+	deleteObject: function() {
+		 this.callParent(arguments);
+		
+		this.getChildList().store.removeAll();
+
+	},
 
  
 
