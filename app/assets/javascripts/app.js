@@ -21,6 +21,7 @@ Ext.application({
 			'Departments',
 			'Stores',
 			'SalesOrders',
+			'SalesItems',
 			'Navs'
 		],
 

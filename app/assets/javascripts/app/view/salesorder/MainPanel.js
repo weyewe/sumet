@@ -63,9 +63,8 @@ Ext.define('AM.view.salesorder.MainPanel' ,{
 	
 	buildSalesItemList	: function(){
 		return {
-			xtype	: "panel",
-			region	: 'center',
-			html	: 'hehehhe',
+			xtype	: "salesitemlist",
+			region	: 'center', 
 			title	: "Sales Item",
 			flex	: 3
 		};

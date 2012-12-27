@@ -37,5 +37,28 @@ Ext.define('AM.store.SalesOrders', {
 
 	listeners: {
 
-	} 
+	} ,
+	onCreateRecords:function (records, operation, success) {
+		console.log("onCreateRecords");
+	},
+
+	onUpdateRecords:function (records, operation, success) {
+		// console.log("onUpdateRecords");
+		// 
+		// console.log("length of records: " + records.length );
+		// var record = records[0];
+		// // var salesOrderList = Ext.widget("salesorderlist");
+		// var selectedRowIndex = this.indexOf(record); 
+		// console.log("the row index: " + selectedRowIndex);
+		// console.log("the id: " + record.getId());
+		// 
+		// // Ext.widget("salesorderlist").getView().select(selectedRowIndex);
+		// Ext.widget("salesorderlist").getView().select(record, true, true);
+	},
+
+	onDestroyRecords:function (records, operation, success) {
+		console.log("onDestroyRecords");
+	}
+
+
 });

@@ -167,6 +167,7 @@ Ext.define('AM.controller.BaseCrud', {
 		var values = form.getValues(); 
 
 		if( record ){
+			console.log("It seems that we are in update");
 			record.beginEdit(); 
 			// if there is record present in the form, this must be an update
 			record.set( values );
@@ -175,7 +176,12 @@ Ext.define('AM.controller.BaseCrud', {
 			if( record.isValid() ) {
 				// record.save(); 
 				record.endEdit(); 
-				store.sync(); 
+				console.log("Gonna sync");
+				store.sync({
+					callback	: function(){
+						console.log("FUCk bro, success updating");
+					}
+				}); 
 
 				win.close(); 
 			}else{ 

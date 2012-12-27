@@ -6,6 +6,9 @@ Ext.define('AM.view.salesorder.List' ,{
 	title : 'Sales Order',
 	
   	store: 'SalesOrders', 
+
+	defaultTitle	: 'Sales Order',
+	
  	columns	: [
 		{ header: 'Code',  dataIndex: 'code',  flex: 1 , sortable: false} 
 	],
@@ -27,6 +30,8 @@ Ext.define('AM.view.salesorder.List' ,{
 	
 	cleanSlate		: function(){
 		this.callParent(arguments);
+		
+		this.setTitle( this.defaultTitle );
 		
 		console.log("additional logics for cleanSlate@List salesorder");
 		console.log("Gonna select the first item");
