@@ -64,9 +64,9 @@ Ext.define('AM.controller.Navs', {
 			
 			cardLayout.setActiveItem( newActiveItemIndex );
 			
-			// if( newActiveItem.cleanSlate ) {
-			// 	newActiveItem.cleanSlate(); 
-			// } 
+			if( newActiveItem.cleanSlate ) {
+				newActiveItem.cleanSlate(); 
+			} 
 		}
 		
 	}, 

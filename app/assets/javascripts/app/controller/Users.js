@@ -203,6 +203,13 @@ Ext.define('AM.controller.Users', {
   },
 
   selectionChange: function(selectionModel, selections) {
+	console.log("The on selectionChange is called");
+	console.log("selections length: " +  selections.length );
+	// selections will give this: Ext.data.Model[]
+	var selected = selections[0];
+	console.log("\n\n ****************** Inspect element");
+	console.log("The name is "  + selected.get("first_name") );
+	console.log("The id is "  + selected.get("id") );
     var grid = this.getList();
 
     if (selections.length > 0) {

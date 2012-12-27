@@ -54,5 +54,9 @@ Ext.define('AM.view.employee.List' ,{
 	disableRecordButtons: function() {
 		this.editUserButton.disable();
 		this.deleteUserButton.disable();
+	},
+
+	cleanSlate	: function(){
+		this.store.load();
 	}
 });

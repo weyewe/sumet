@@ -19,6 +19,9 @@ Ext.define("AM.view.Cardpanel", {
 		},
 		{
 			xtype		: 'storelist'
+		},
+		{
+			xtype		: 'salesordermainpanel'
 		}
 	],
 	
@@ -79,6 +82,15 @@ Ext.define("AM.view.Cardpanel", {
 					toggleGrp		: 'navGrp',
 					enableToggle	: true, 
 					pressed			:  (  selectedActiveItemIndex   === 4 )  ,
+					action			: 'changetoolbar'
+				},
+				'-',
+				{
+					text			: 'Sales Order',
+					itemType		: 'salesordermainpanel',
+					toggleGrp		: 'navGrp',
+					enableToggle	: true, 
+					pressed			:  (  selectedActiveItemIndex   === 5 )  ,
 					action			: 'changetoolbar'
 				},
 				'->',

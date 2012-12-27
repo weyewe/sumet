@@ -54,6 +54,10 @@ Ext.define('AM.view.department.List' ,{
 	disableRecordButtons: function() {
 		this.editObjectButton.disable();
 		this.deleteObjectButton.disable();
+	},
+
+	cleanSlate	: function(){
+		this.store.load();
 	}
 });
 

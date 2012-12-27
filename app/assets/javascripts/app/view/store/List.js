@@ -18,5 +18,7 @@ Ext.define('AM.view.store.List' ,{
 		this.addObjectButton.setText("Add Store");
 		this.editObjectButton.setText("Edit Store");
 		this.deleteObjectButton.setText("Delete Store");
-	} 
+		
+		// this.store.load();
+	}
 });

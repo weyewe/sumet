@@ -4,6 +4,8 @@ Extjs4AccountManager::Application.routes.draw do
   resources :employees
   resources :departments 
   
+  resources :sales_orders
+  
   resources :stores
   root :to => 'index#index'
 

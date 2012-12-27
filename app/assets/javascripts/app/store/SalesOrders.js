@@ -1,28 +1,28 @@
 // Models are typically used with a Store, which is basically a collection of Model instances.
-Ext.define('AM.store.Stores', {
+Ext.define('AM.store.SalesOrders', {
   	extend: 'Ext.data.Store',
 
-  	model: 'AM.model.Store',
+  	model: 'AM.model.SalesOrder',
   	// autoLoad: {start: 0, limit: this.pageSize},
 	autoLoad	: false , 
   	autoSync: false,
 	pageSize : 10, 
 	
 	proxy: {
-		url: '/stores',
+		url: '/sales_orders',
 		type: 'rest',
 		format: 'json',
 	
 		reader: {
-			root: 'stores',
-			record: 'store',
+			root: 'sales_orders',
+			record: 'sales_order',
 			successProperty: 'success',
 			totalProperty : 'total'
 		},
 			
 		writer: {
 			getRecordData: function(record) {
-				return { store : record.data };
+				return { sales_order : record.data };
 			}
 		}
 	},

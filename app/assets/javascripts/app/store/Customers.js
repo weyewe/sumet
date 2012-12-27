@@ -3,7 +3,8 @@ Ext.define('AM.store.Customers', {
   	extend: 'Ext.data.Store',
 
   	model: 'AM.model.Customer',
-  	autoLoad: {start: 0, limit: this.pageSize},
+  	// autoLoad: {start: 0, limit: this.pageSize},
+	autoLoad	: false, 
   	autoSync: false,
 	pageSize : 10, 
 	

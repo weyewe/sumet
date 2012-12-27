@@ -57,5 +57,10 @@ Ext.define('AM.view.util.CrudList' ,{
 	disableRecordButtons: function() {
 		this.editObjectButton.disable();
 		this.deleteObjectButton.disable();
+	},
+
+	cleanSlate	: function(){
+		this.store.load();
+		console.log("Called cleanSlate from CRUDLIST");
 	}
 });

@@ -20,6 +20,7 @@ Ext.application({
 			'Employees',
 			'Departments',
 			'Stores',
+			'SalesOrders',
 			'Navs'
 		],
 
