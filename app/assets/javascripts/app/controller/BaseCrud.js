@@ -158,16 +158,7 @@ Ext.define('AM.controller.BaseCrud', {
 		
 		console.log("finished addObject from BaseCrud");
 	},
-
-	editObject: function() {
-		console.log("Edit object cuuy");
-		var record = this.getList().getSelectedObject(); 
-		var view   = Ext.widget(	this.formSelector  ); 
-		view.down('form').loadRecord(record);
-		view.setUpdateMode(); 
-		view.setTitle("Update Store");
-	},
-
+	
 	createObject	: function(button){
 		console.log("GONNA CREATE NEW OBJECT");
 		var win = button.up('window');
@@ -180,7 +171,8 @@ Ext.define('AM.controller.BaseCrud', {
 		var values = form.getValues();
 		var newObject = Ext.create( this.backingModel  ,  values );
 		if( newObject.isValid() ){
-			store.add( newObject); 
+			store.add( newObject);
+			
 			store.sync();
 			this.getList().query('pagingtoolbar')[0].doRefresh(); 
 			win.close(); 
@@ -189,6 +181,17 @@ Ext.define('AM.controller.BaseCrud', {
 			form.getForm().markInvalid(errors);
 		} 
 	},
+
+	editObject: function() {
+		console.log("Edit object cuuy");
+		var record = this.getList().getSelectedObject(); 
+		var view   = Ext.widget(	this.formSelector  ); 
+		view.down('form').loadRecord(record);
+		view.setUpdateMode(); 
+		view.setTitle("Update Store");
+	},
+
+	
 	
 	
 	updateObject: function(button) {

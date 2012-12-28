@@ -89,6 +89,9 @@ Ext.define('AM.controller.SalesOrders', {
 			// console.log("childList's store's total property: " + childList.store.totalProperty);
 			childList.setTitle( this.composeChildListTitle(selected) );
 			childList.enableAddObjectButton(); 
+			// store.proxy.extraParams.name = 'steve';  
+			// we have to ensure that the paging toolbar refreshed.. bringing the sales order id
+			childList.store.proxy.extraParams.sales_order_id = selected.get("id"); 
 			
 			childList.store.load({
 				params : {

@@ -1,6 +1,8 @@
-
+// problem: after create or update: will query for the new shite
+// how can the paging toolbar embed the sales_order_id?
 Ext.define('AM.view.salesitem.Form', {
-  extend: 'Ext.window.Window',
+	extend: 'AM.view.util.CrudForm',
+  // extend: 'Ext.window.Window',
   alias : 'widget.salesitemform',
 
   	title : 'Add / Edit Sales Item',
@@ -20,11 +22,11 @@ Ext.define('AM.view.salesitem.Form', {
 				name : 'id',
 				fieldLabel: 'id'
 			}, 
-			{
-				xtype: 'hidden',
-				name : 'sales_order_id',
-				fieldLabel: 'sales_order_id'
-			},
+			// {
+			// 		xtype: 'hidden',
+			// 		name : 'sales_order_id',
+			// 		fieldLabel: 'sales_order_id'
+			// 	},
 			{
 				xtype: 'textfield',
 				name : 'code',
