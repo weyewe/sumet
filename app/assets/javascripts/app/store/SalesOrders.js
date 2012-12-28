@@ -12,6 +12,8 @@ Ext.define('AM.store.SalesOrders', {
 		url: '/sales_orders',
 		type: 'rest',
 		format: 'json',
+		
+		
 	
 		reader: {
 			root: 'sales_orders',

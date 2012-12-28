@@ -12,27 +12,37 @@ Ext.define('AM.view.salesitem.Form', {
 	
   initComponent: function() {
     this.items = [{
-      xtype: 'form',
-			msgTarget	: 'side',
-      items: [{
-        xtype: 'hidden',
-        name : 'id',
-        fieldLabel: 'id'
-      }, {
-        xtype: 'textfield',
-        name : 'code',
-        fieldLabel: 'Code'
-      } ]
+     	xtype: 'form',
+		msgTarget	: 'side',
+      	items: 	[
+			{
+				xtype: 'hidden',
+				name : 'id',
+				fieldLabel: 'id'
+			}, 
+			{
+				xtype: 'hidden',
+				name : 'sales_order_id',
+				fieldLabel: 'sales_order_id'
+			},
+			{
+				xtype: 'textfield',
+				name : 'code',
+				fieldLabel: 'Code'
+			}
+ 		]
     }];
 
-    this.buttons = [{
-      text: 'Save',
-      action: 'save'
-    }, {
-      text: 'Cancel',
-      scope: this,
-      handler: this.close
-    }];
+    this.buttons = [
+		{
+			text: 'Save',
+			action: 'save'
+		}, {
+			text: 'Cancel',
+			scope: this,
+			handler: this.close
+		}
+	];
 
     this.callParent(arguments);
   }

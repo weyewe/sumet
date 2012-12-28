@@ -24,17 +24,13 @@ Ext.define('AM.view.salesorder.List' ,{
  	},
 
 	viewready		: function( grid, options ) {
-		// grid.getStore().data.items
-		console.log("I am ready. select one item in the list, load the sales item");
+	 
 	},
 	
 	cleanSlate		: function(){
 		this.callParent(arguments);
 		
 		this.setTitle( this.defaultTitle );
-		
-		console.log("additional logics for cleanSlate@List salesorder");
-		console.log("Gonna select the first item");
-		// no, no. we don't load sales item automatically.. 
+ 
 	}
 });

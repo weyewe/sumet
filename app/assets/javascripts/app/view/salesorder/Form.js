@@ -1,7 +1,8 @@
 
 Ext.define('AM.view.salesorder.Form', {
-  extend: 'Ext.window.Window',
-  alias : 'widget.salesorderform',
+	extend: 'AM.view.util.CrudForm',
+	// extend: 'Ext.window.Window',
+	alias : 'widget.salesorderform',
 
   	title : 'Add / Edit Sales Order',
   	layout: 'fit',
@@ -12,28 +13,22 @@ Ext.define('AM.view.salesorder.Form', {
 	
   initComponent: function() {
     this.items = [{
-      xtype: 'form',
-			msgTarget	: 'side',
-      items: [{
-        xtype: 'hidden',
-        name : 'id',
-        fieldLabel: 'id'
-      }, {
-        xtype: 'textfield',
-        name : 'code',
-        fieldLabel: 'Code'
-      } ]
+     	xtype: 'form',
+		msgTarget	: 'side',
+      	items: 	[
+			{
+				xtype: 'hidden',
+				name : 'id',
+				fieldLabel: 'id'
+			}, {
+				xtype: 'textfield',
+				name : 'code',
+				fieldLabel: 'Code'
+			}
+ 		]
     }];
 
-    this.buttons = [{
-      text: 'Save',
-      action: 'save'
-    }, {
-      text: 'Cancel',
-      scope: this,
-      handler: this.close
-    }];
-
+    
     this.callParent(arguments);
   }
 });

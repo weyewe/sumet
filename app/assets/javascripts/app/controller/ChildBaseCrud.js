@@ -1,4 +1,4 @@
-Ext.define('AM.controller.BaseCrud', {
+Ext.define('AM.controller.ChildBaseCrud', {
   extend: 'Ext.app.Controller',
 
 /*
@@ -158,16 +158,7 @@ Ext.define('AM.controller.BaseCrud', {
 		
 		console.log("finished addObject from BaseCrud");
 	},
-
-	editObject: function() {
-		console.log("Edit object cuuy");
-		var record = this.getList().getSelectedObject(); 
-		var view   = Ext.widget(	this.formSelector  ); 
-		view.down('form').loadRecord(record);
-		view.setUpdateMode(); 
-		view.setTitle("Update Store");
-	},
-
+	
 	createObject	: function(button){
 		console.log("GONNA CREATE NEW OBJECT");
 		var win = button.up('window');
@@ -189,6 +180,17 @@ Ext.define('AM.controller.BaseCrud', {
 			form.getForm().markInvalid(errors);
 		} 
 	},
+
+	editObject: function() {
+		console.log("Edit object cuuy");
+		var record = this.getList().getSelectedObject(); 
+		var view   = Ext.widget(	this.formSelector  ); 
+		view.down('form').loadRecord(record);
+		view.setUpdateMode(); 
+		view.setTitle("Update Store");
+	},
+
+	
 	
 	
 	updateObject: function(button) {

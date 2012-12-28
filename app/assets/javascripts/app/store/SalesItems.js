@@ -19,6 +19,7 @@ Ext.define('AM.store.SalesItems', {
 			successProperty: 'success',
 			totalProperty : 'total'
 		},
+	
 			
 		writer: {
 			getRecordData: function(record) {

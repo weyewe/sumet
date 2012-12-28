@@ -1,6 +1,6 @@
 
 Ext.define('AM.view.store.Form', {
-  extend: 'Ext.window.Window',
+  extend: 'AM.view.util.CrudForm',
   alias : 'widget.storeform',
 
   title : 'Add / Edit Store',
@@ -11,29 +11,26 @@ Ext.define('AM.view.store.Form', {
 // if autoShow == true.. on instantiation, will automatically be called 
 	
   initComponent: function() {
-    this.items = [{
-      xtype: 'form',
+	this.items = [
+		{
+			xtype: 'form',
 			msgTarget	: 'side',
-      items: [{
-        xtype: 'hidden',
-        name : 'id',
-        fieldLabel: 'id'
-      }, {
-        xtype: 'textfield',
-        name : 'name',
-        fieldLabel: ' Name'
-      } ]
-    }];
+			items: [
+				{
+					xtype: 'hidden',
+					name : 'id',
+					fieldLabel: 'id'
+				}, 
+				{
+					xtype: 'textfield',
+					name : 'name',
+					fieldLabel: ' Name'
+				} 
+			]
+		}
+	];
 
-    this.buttons = [{
-      text: 'Save',
-      action: 'save'
-    }, {
-      text: 'Cancel',
-      scope: this,
-      handler: this.close
-    }];
-
+ 
     this.callParent(arguments);
-  }
+  } 
 });

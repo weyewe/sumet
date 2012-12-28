@@ -85,7 +85,16 @@ Ext.define('AM.controller.SalesOrders', {
 		// http://stackoverflow.com/questions/6919131/extjs-4-grid-how-to-select-a-newly-created-record
 		
 		if( selected !== undefined ){
-			this.getChildList().setTitle( this.composeChildListTitle(selected) );
+			var childList = this.getChildList();
+			// console.log("childList's store's total property: " + childList.store.totalProperty);
+			childList.setTitle( this.composeChildListTitle(selected) );
+			childList.enableAddObjectButton(); 
+			
+			childList.store.load({
+				params : {
+					sales_order_id : selected.get("id")
+				}
+			});
 		}
 		
 		
@@ -177,7 +186,8 @@ Ext.define('AM.controller.SalesOrders', {
 	deleteObject: function() {
 		 this.callParent(arguments);
 		
-		this.getChildList().store.removeAll();
+		// this.getChildList().store.removeAll();
+		this.getChildList().cleanSlate();
 
 	},
 

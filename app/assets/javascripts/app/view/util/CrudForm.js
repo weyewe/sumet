@@ -1,57 +1,47 @@
-Ext.define('AM.view.util.CrudForm', {
-	extend: 'Ext.window.Window', 
 
-  // title : 'Add / Edit User',
-	layout: 'fit',
+Ext.define('AM.view.util.CrudForm', {
+  extend: 'Ext.window.Window', 
+
+  title : 'Add / Edit Store',
+  layout: 'fit',
 	width	: 500,
-  	autoShow: true,  // does it need to be called?
+  autoShow: true,  // does it need to be called?
 // win.show() 
 // if autoShow == true.. on instantiation, will automatically be called 
 	
-  	initComponent: function() {
-    	this.items = [
-			{
-      			xtype: 'form',
-				msgTarget	: 'side',
-				
-      			items: [
-					{
-        				xtype: 'hidden',
-        				name : 'id',
-        				fieldLabel: 'id'
-      				}, 
-					{
-        				xtype: 'textfield',
-        				name : 'first_name',
-        				fieldLabel: 'First Name'
-      				}, 
-					{
-        				xtype: 'textfield',
-        				name : 'last_name',
-        				fieldLabel: 'Last Name'
-      				}, 
-					{
-        				xtype: 'textfield',
-        				name : 'email',
-        				fieldLabel: 'Email'
-      				}
-				]
-    		}
-		];
+  initComponent: function() { 
+	this.buttons = [
+		{
+			text: 'Create',
+			action: 'create'
+		}, 
+		{
+			text	: "Update",
+			action	: 'update'
+		},
+		{
+			text: 'Cancel',
+			scope: this,
+			handler: this.close
+		}
+	];
 
-	    this.buttons = [
-			{
-	      		text: 'Save',
-	      		action: 'save'
-	    	}, 
-			{
-	      		text: 'Cancel',
-	      		scope: this,
-	      		handler: this.close
-	    	}
-		];
+    this.callParent(arguments);
+  },
 
-    	this.callParent(arguments);
-  	}
+	setCreateMode	: function(){
+		var createButton = this.query("button[action='create']").pop();
+		var updateButton = this.query("button[action='update]").pop();
+		
+		createButton.setVisible( true );
+		updateButton.setVisible( false ) ;
+	},
+	
+	setUpdateMode	: function(){
+		var createButton = this.query("button[action='create']").pop();
+		var updateButton = this.query("button[action='update]").pop();
+		
+		createButton.setVisible( false );
+		updateButton.setVisible( true ) ;
+	}
 });
-
