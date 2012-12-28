@@ -25,7 +25,7 @@ class SalesOrdersController < ApplicationController
   def update
     @object = SalesOrder.find(params[:id])
     # sleep 2 
-    respond_to do |format|
+    respond_to do |format| 
       if @object.update_attributes(params[:sales_order])
         format.json { render :json => { :success => true, :sales_orders => [@object],
                                         :total => SalesOrder.all.count  } }
@@ -34,7 +34,10 @@ class SalesOrdersController < ApplicationController
   end
 
   def destroy
+    
     @object = SalesOrder.find(params[:id])
+    
+     
     @object.destroy
 
     respond_to do |format|

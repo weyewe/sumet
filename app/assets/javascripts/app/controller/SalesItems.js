@@ -51,39 +51,7 @@ Ext.define('AM.controller.SalesItems', {
 			// this.getList().setTitle(selected.get("code") );
 		}
 		
-	},
-	
-	// addObject		: function(){
-	// 	this.callParent(arguments); 
-	// 	var hiddenFields = Ext.ComponentQuery.query('salesitemform hidden');
-	// 	console.log("The length of hiddenfield: " + hiddenFields.length);
-	// 	console.log("THe first field classname: " + Ext.getClassName( hiddenFields[0] ) );
-	// 	
-	// 	console.log("Tryign with Ext.widget");
-	// 	var hiddenFields = Ext.widget( this.formSelector ).query('hidden');
-	// 	console.log("the length of 2nd hiddenfields: " + hiddenFields.length);
-	// 	console.log("THe 2nd field classname: " + Ext.getClassName( hiddenFields[0] ) );
-	// 	
-	// 	
-	// 	var hiddenField = Ext.widget( this.formSelector ).query('hidden[name="sales_order_id"]');
-	// 	// hiddenField is an array
-	// 	console.log(" the length of hiddenField: " + hiddenField.length );
-	// 	hiddenField = hiddenField.pop();
-	// 	console.log("THe hidden field classname: " + Ext.getClassName( hiddenField ) );
-	// 	// add the sales order id to the hidden field 
-	// 	
-	// 	var selections = this.getParentList().getSelectionModel().getSelection();
-	// 	var selected = selections[0];
-	// 	console.log("The selected code is : " + selected.get("code"));
-	// 	
-	// 	
-	// 	
-	// 	hiddenField.setValue(selected.get('id') );
-	// 	
-	// },
-	
- 
-
+	}, 
  
 
 });

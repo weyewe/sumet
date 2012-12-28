@@ -4,6 +4,7 @@ Ext.define('AM.view.util.CrudForm', {
 
   title : 'Add / Edit Store',
   layout: 'fit',
+	modal	: true,
 	width	: 500,
   autoShow: true,  // does it need to be called?
 // win.show() 

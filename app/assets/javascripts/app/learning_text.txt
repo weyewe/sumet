@@ -1,0 +1,64 @@
+updateObject: function(button) {
+	// update the title of the child 
+	var win = button.up('window');
+	var form = win.down('form');
+	
+
+	
+	
+	var record = form.getRecord();
+	
+	this.callParent(arguments);
+	
+	
+	
+	if( record !== undefined ){
+		this.getChildList().setTitle( this.composeChildListTitle(record) );
+		// this.getList().getSelectionModel.select( record );
+				// 	
+				// // this.getList().getSelectionModel().select(record,[false],[false]);
+				// // Ext.getCmp('grid').getSelectionModel().selectRow(0);
+				// var selectedRowIndex = this.getList().store.indexOf(record); 
+				// console.log( "The selectedRowIndex: " + selectedRowIndex);
+				// if( selectedRowIndex !== undefined ){
+				// 	// this.getList().getSelectionModel.selectRow( selectedRowIndex );
+			// this.getList().getView().select(record, true, true);
+			// this.getList().getView().select(0);
+		// }
+		// console.log("Gonna execute");
+		// var rowIndex = this.getSalesOrdersStore().find('id', record.getId()); 
+		// 	        this.getList().getView().select(rowIndex);
+
+		
+		// http://stackoverflow.com/questions/9111084/remember-after-refresh-selected-row-in-extjs-grid
+		
+		
+		// last one
+		// http://www.sencha.com/forum/showthread.php?141718-programmatically-select-grid-panel-row-with-ExtJS4
+		
+		
+		// store.load({
+		//     scope: this,
+		//     callback: function(records, operation, success) {
+		//         // the operation object
+		//         // contains all of the details of the load operation
+		//         console.log(records);
+		//     }
+		// });
+		// 
+		// minified version
+		// store.load(function(records, operation, success) {
+		//     console.log('loaded records');
+		// });
+		
+		// recommended usage
+		// store.load({
+		//     callback: function (records, operation, success) {        
+		//         var rowIndex = this.find('id', record.getId());  //where 'id': the id field of your model, record.getId() is the method automatically created by Extjs. You can replace 'id' with your unique field.. And 'this' is your store.
+		//         grid.getView().select(rowIndex);
+		//     }
+		// })
+		
+	}
+	
+},

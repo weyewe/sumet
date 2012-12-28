@@ -7,7 +7,7 @@ Ext.define('AM.view.salesorder.List' ,{
 	
   	store: 'SalesOrders', 
 
-	defaultTitle	: 'Sales Order',
+	// defaultTitle	: 'Sales Order',
 	
  	columns	: [
 		{ header: 'Code',  dataIndex: 'code',  flex: 1 , sortable: false} 
@@ -23,14 +23,14 @@ Ext.define('AM.view.salesorder.List' ,{
 		this.deleteObjectButton.setText("Delete");		
  	},
 
-	viewready		: function( grid, options ) {
-	 
-	},
-	
-	cleanSlate		: function(){
-		this.callParent(arguments);
-		
-		this.setTitle( this.defaultTitle );
- 
-	}
+	// viewready		: function( grid, options ) {
+	//  
+	// },
+	// 
+	// cleanSlate		: function(){
+	// 	this.callParent(arguments);
+	// 	
+	// 	this.setTitle( this.defaultTitle );
+	//  
+	// }
 });

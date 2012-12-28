@@ -17,9 +17,9 @@ Ext.define("AM.view.Cardpanel", {
 		{
 			xtype		: 'customerlist'
 		},
-		{
-			xtype		: 'storelist'
-		},
+		// {
+		// 	xtype		: 'storelist'
+		// },
 		{
 			xtype		: 'salesordermainpanel'
 		}
@@ -75,15 +75,15 @@ Ext.define("AM.view.Cardpanel", {
 					pressed			:  (  selectedActiveItemIndex   === 3 )  ,
 					action			: 'changetoolbar'
 				},
-				'-',
-				{
-					text			: 'Manage Store',
-					itemType		: 'storelist',
-					toggleGrp		: 'navGrp',
-					enableToggle	: true, 
-					pressed			:  (  selectedActiveItemIndex   === 4 )  ,
-					action			: 'changetoolbar'
-				},
+				// '-',
+				// {
+				// 	text			: 'Manage Store',
+				// 	itemType		: 'storelist',
+				// 	toggleGrp		: 'navGrp',
+				// 	enableToggle	: true, 
+				// 	pressed			:  (  selectedActiveItemIndex   === 4 )  ,
+				// 	action			: 'changetoolbar'
+				// },
 				'-',
 				{
 					text			: 'Sales Order',
@@ -93,6 +93,7 @@ Ext.define("AM.view.Cardpanel", {
 					pressed			:  (  selectedActiveItemIndex   === 5 )  ,
 					action			: 'changetoolbar'
 				},
+			 
 				'->',
 				{
 					text			: 'Log out'

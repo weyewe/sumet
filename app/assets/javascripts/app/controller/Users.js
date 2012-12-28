@@ -24,7 +24,7 @@ Ext.define('AM.controller.Users', {
 	],
 
   init: function() {
-		console.log("INit the users controller");
+		// console.log("INit the users controller");
     this.control({
       'userlist': {
         itemdblclick: this.editUser,

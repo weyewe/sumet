@@ -6,6 +6,7 @@ Ext.define('AM.view.util.CrudList' ,{
 	store	: undefined,
 	title	: undefined, 
 	columns	: undefined, 
+	// selectedRecord : undefined, 
  
 
 	initComponent: function() {
@@ -46,7 +47,22 @@ Ext.define('AM.view.util.CrudList' ,{
  
 	loadMask	: true,
 	getSelectedObject: function() {
+		// var selections = this.getSelectionModel().getSelection();
+		// // selections.each(function(selection){
+		// // 	console.log("The id: " + selection.get("id"));
+		// // });
+		// console.log("The length of the selectiosn: " + selections.length);
+		// for( var i =0 ; i < selections.length ; i++ ) {
+		// 	var selection = selections[i];
+		// 	// console.log("The id: " + selection.get("id"));
+		// 	
+		// 	console.log("The classname of member " + i  + ": " + Ext.getClassName( selection) ) ; 
+		// }
+		
+		var selections = this.getSelectionModel().getSelection();
+		console.log("Selections length: " + selections.length );
 		return this.getSelectionModel().getSelection()[0];
+		// return this.selectedRecord; 
 	},
 
 	enableRecordButtons: function() {

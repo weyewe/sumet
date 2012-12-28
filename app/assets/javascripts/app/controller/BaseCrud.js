@@ -220,6 +220,7 @@ Ext.define('AM.controller.BaseCrud', {
 			win.close(); 
 		}else{ 
 			// record is not valid 
+			// record.endEdit(); 
 			var errors = record.validate(); 
 			form.getForm().markInvalid(errors);
 			record.cancelEdit();
@@ -227,11 +228,16 @@ Ext.define('AM.controller.BaseCrud', {
 	},
 
 	deleteObject: function() {
+		// console.log("Delete bject from base crud");
 		var record = this.getList().getSelectedObject();
+		// get selected object always refers to the same id, despite deleted 
+		// console.log("from the BaseCRUD:");
+		console.log("BaseCrud#deleteObject => The selected record id is : " + record.get("id"));
 
 		if (record) {
 			// var store = this.getUsersStore();
 			var store = this.getStore( this.backingStore ) ;
+			console.log("Gonna remove record with id " + record.getId() );
 			store.remove(record);
 			store.sync();
 			// to do refresh programmatically
@@ -241,7 +247,7 @@ Ext.define('AM.controller.BaseCrud', {
 	},
 
 	selectionChange: function(selectionModel, selections) {
-		console.log("Shite man. in selectionChange");
+		// console.log("Shite man. in selectionChange");
 		var grid = this.getList();
 
 		if (selections.length > 0) {

@@ -29,6 +29,7 @@ Ext.define('AM.view.salesitem.List' ,{
 		// this.store.removeAll();
 		this.setTitle( this.defaultTitle );
 		this.disableAddObjectButton(); 
+		this.store.removeAll();
 		// console.log("Called cleanSlate from CRUDLIST");
 	},
 	

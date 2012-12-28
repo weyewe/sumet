@@ -26,21 +26,20 @@ Ext.define('AM.view.salesorder.MainPanel' ,{
 	initComponent		: function(){
 		var salesOrderList = this.buildSalesOrderList();
 		var salesItemList	= this.buildSalesItemList();
-		var salesItemDetails	= this.buildSalesItemDetails();
+		// var salesItemDetails	= this.buildSalesItemDetails();
 		
 		var panel_items = [
 			salesOrderList,
-			salesItemList,
-			salesItemDetails 
+			salesItemList //,
+			// 			salesItemDetails 
 		];
 		Ext.apply(this, {
 			items	: panel_items
-		})
-		console.log("initcomponent of mainpanel");
+		}) 
+		
 		
 		this.callParent(arguments);
-		console.log("Done initcomponent of mainpanel");
-		console.log("Total items: " +  this.items.length );
+	 
 		
 	},
 	
